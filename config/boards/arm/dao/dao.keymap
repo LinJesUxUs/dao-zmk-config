@@ -44,12 +44,12 @@
 // -----------------------------------------------------------------------------------------
 // |  +  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  _  |
 // |  =  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-// |  \  |     |     |     |     |     |   | CAPS| NUM |  ,  |  .  |  /  |  ]  |
+// |  \  |     |     |     |     |     |   | CAPS| ADJ |  ,  |  .  |  /  |  ]  |
 //                   |trans|trans|trans|   | ADJ |trans|trans|
                         bindings = <
    &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6       &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDER 
    &kp EQUAL &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET    &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
-   &trans    &none    &none  &none    &none    &none            &kp CAPSLOCK &tog NUM &trans   &trans   &trans   &trans
+   &trans    &none    &none  &none    &none    &none            &kp CAPSLOCK &tog ADJ &trans   &trans   &trans   &trans
                              &trans   &trans   &trans           &mo ADJ      &trans   &trans
                         >;
                 };
@@ -71,12 +71,12 @@
 // -----------------------------------------------------------------------------------------
 // | RST | BLDR|     |     |SLEEP| PWR |   | PWR |SLEEP|     |     | BLDR| RST |
 // |BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 |BTCLR|
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   | tog |     |     |     |     |     |
 //                   |     |LANG2|LANG1|   |LANG1|LANG2|     |
                         bindings = <
    &sys_reset &bootloader  &none        &none        &kp C_SLEEP  &kp C_PWR     &kp C_PWR    &kp C_SLEEP  &none        &none        &bootloader  &sys_reset
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR
-   &none      &none        &none        &none        &none        &none         &none        &none        &none        &none        &none        &none
+   &none      &none        &none        &none        &none        &none         &tog ADJ     &none        &none        &none        &none        &none
                                         &none        &none        &trans        &trans       &none        &none
                         >;
                 };

@@ -27,7 +27,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                default_layer { 
 // -----------------------------------------------------------------------------------------
 // |  ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [  |
 // |ApMnu|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
@@ -47,10 +47,10 @@
 // |  \  |     |     |     |     |     |   | CAPS|     |  ,  |  .  |  /  |  ]  |
 //                   |trans|trans|trans|   | ADJ |trans|trans|
                         bindings = <
-   &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6       &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDER
+   &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6       &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDER 
    &kp EQUAL &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET    &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
    &trans    &none    &none  &none    &none    &none            &kp CAPSLOCK &none    &trans   &trans   &trans   &trans
-                             &trans   &trans   &trans           &lt ADJ      &trans   &trans
+                             &trans   &trans   &trans           &mo ADJ      &trans   &trans
                         >;
                 };
 
@@ -59,12 +59,12 @@
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  F7 |  F8 |  F9 | F10 | F11 | F12 |
 // | SPACE| ALT |LSHFT| VOLU| MUT | PREV|   | HOME| PGUP|  UP | PGDN|PSCRN|PAUSE|
 // | STOP | PLAY| BR- | VOLD| BR+ | NEXT|   | END | LEFT| DOWN| RGHT| INS |ApMnu|
-//                    | ALT |LCTRL| ADJ |   |     |SPC/Ctrl| ALT |
+//                    | ALT|SPC/Ctrl|ADJ|   |    |SPC/Ctrl|ALT|
                         bindings = <
    &kp F1     &kp F2   &kp F3        &kp F4       &kp F5        &kp F6          &kp F7   &kp F8    &kp F9   &kp F10   &kp F11   &kp F12
    &kp SPACE  &kp LALT &kp LSHFT     &kp C_VOL_UP &kp C_MUTE    &kp C_PREV      &kp HOME &kp LEFT  &kp UP   &kp RIGHT &kp PSCRN &kp PAUSE_BREAK
    &kp C_STOP &kp C_PP &kp C_BRI_DEC &kp C_VOL_DN &kp C_BRI_INC &kp C_NEXT      &kp END  &kp PG_UP &kp DOWN &kp PG_DN &kp INS   &mt C_MENU K_APP
-                                     &kp LALT     &trans        &lt ADJ         &trans   &mt LCTRL SPACE    &kp LALT
+                                     &kp LALT     &trans        &mo ADJ         &trans   &mt LCTRL SPACE    &kp LALT
                         >;
                 };
                 adjust_layer {

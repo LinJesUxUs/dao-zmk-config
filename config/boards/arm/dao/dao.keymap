@@ -35,23 +35,23 @@
 // |  \  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  ]  |
 //                |Tab/Super|SPC/Ctrl|NUM/Ret|   |FNC/Esc|BKSP/shft|Alt/Del|
                         bindings = <
-   &kp GRAVE &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
-   &kp K_APP &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp BSLH  &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
-  &mt LGUI TAB &mt LCTRL SPACE &lt NUM RET      &lt FNC ESC &mt LSHFT BSPC &mt LALT DEL
+   &kp GRAVE   &kp Q    &kp W   &kp E   &kp R   &kp T       &kp Y    &kp U   &kp I     &kp O   &kp P    &kp LBKT
+   &kp K_APP   &kp A    &kp S   &kp D   &kp F   &kp G       &kp H    &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+   &kp BSLH    &kp Z    &kp X   &kp C   &kp V   &kp B       &kp N    &kp M   &kp COMMA &kp DOT &kp FSLH &kp RBKT
+         &mt LGUI TAB   &mt LCTRL SPACE   &lt NUM RET       &lt FNC ESC  &mt LSHFT BSPC  &mt LALT DEL
                         >;
                 };
                 number_layer {
 // -----------------------------------------------------------------------------------------
 // |  +  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  _  |
 // |  =  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-// |  \  |     |     |     |     |     |   | CAPS|     |  ,  |  .  |  /  |  ]  |
-//                   |trans|trans|trans|   | ADJ |trans|trans|
+// |  \  |     |     |     |SHIFT| CAPS|   | CAPS|SHIFT|  ,  |  .  |  /  |  ]  |
+//                   | ALT | CTRL|trans|   | ADJ | CTRL| ALT |
                         bindings = <
-   &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6       &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDER 
-   &kp EQUAL &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET    &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
-   &trans    &none    &none  &none    &none    &none            &kp CAPSLOCK &none    &trans   &trans   &trans   &trans
-                             &trans   &trans   &trans           &mo ADJ      &trans   &trans
+   &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4    &kp N5              &kp N6       &kp N7    &kp N8   &kp N9   &kp N0   &kp UNDER
+   &kp EQUAL &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PRCNT           &kp CARET    &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp MINUS
+   &trans    &none    &none  &none    &kp LSHFT &kp CAPSLOCK        &kp CAPSLOCK &kp LSHFT &trans   &trans   &trans   &trans
+                             &kp LALT &kp LCTRL &trans              &mo ADJ      &kp LCTRL &kp LALT
                         >;
                 };
 
@@ -83,15 +83,15 @@
                 };
                 game_layer {
 // -----------------------------------------------------------------------------------------
-// |  +  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  _  |
-// |  =  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-// |  \  |     |     |     |     |     |   | CAPS| GAM |  ,  |  .  |  /  |  ]  |
-//                   |trans|trans|trans|   | ADJ |trans|trans|
+// |  `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  -  |
+// | TAB |SHIFT|  Q  |  W  |  E  |  R  |   |  T  | LEFT|  UP |RIGHT|  O  |  P  |
+// | CTRL| ALT |  A  |  S  |  D  |  F  |   |  G  |  H  | DOWN|  K  |  L  | GAM |
+//                   | ESC |SPACE| RET |   |     |     |     |
                         bindings = <
-   &kp PLUS  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6       &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDER 
-   &kp EQUAL &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET    &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
-   &trans    &none    &none  &none    &none    &none            &kp CAPSLOCK &tog GAM &trans   &trans   &trans   &trans
-                             &trans   &trans   &trans           &mo ADJ      &trans   &trans
+    &kp GRAVE &kp N1    &kp N2 &kp N3  &kp N4    &kp N5           &kp N6 &kp N7   &kp N8   &kp N9    &kp N0 &kp MINUS
+    &kp TAB   &kp LSHFT &kp Q  &kp W   &kp E     &kp R            &kp T  &kp LEFT &kp UP   &kp RIGHT &kp O  &kp P
+    &kp LCTRL &kp LALT  &kp A  &kp S   &kp D     &kp F            &kp G  &kp H    &kp DOWN &kp K     &kp L  &tog GAM
+                               &kp ESC &kp SPACE &kp RET          &none  &none    &none
                         >;
                 };
         };

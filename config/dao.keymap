@@ -30,6 +30,23 @@
 };
 
 / {
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		
+		tri-layer {
+			if-layers = <LWR RSE>;
+			then-layer = <ADJ>;
+		};
+		game-layer {
+			if-layers = <ADJ>;
+			then-layer = <GAM>;
+		};
+		mouse-layer {
+			if-layers = <ADJ>;
+			then-layer = <MOU>;
+		};
+	};
+
         keymap {
                 compatible = "zmk,keymap";
 

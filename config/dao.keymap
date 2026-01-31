@@ -88,12 +88,12 @@
 // | RST | BLDR|STU_U| TOG |SLEEP| PWR |   | PWR |SLEEP| TOG |STU_U| BLDR| RST |
 // |BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 |BTCLR|
 // |     |     |     | USB | BLE |     |   |     | BLE | USB |     |     |     |
-//                   | GAM |     | MOU |   | MOU |     | GAM |
+//                   | GAM | CAPS| MOU |   | MOU | CAPS| GAM |
                         bindings = <
    &sys_reset &bootloader  &studio_unlock &out OUT_TOG &kp C_SLEEP  &kp C_PWR     &kp C_PWR    &kp C_SLEEP  &out OUT_TOG &studio_unlock &bootloader  &sys_reset
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1   &bt BT_SEL 0 &bt BT_CLR
    &none      &none        &none          &out OUT_USB &out OUT_BLE &none         &none        &out OUT_BLE &out OUT_USB &none          &none        &none
-                                          &tog GAM     &none        &mo MOU       &mo MOU      &none        &tog GAM
+                                          &tog GAM     &kp CAPSLOCK &mo MOU       &mo MOU      &kp CAPSLOCK &tog GAM
                         >;
                 };
                 game_layer {
